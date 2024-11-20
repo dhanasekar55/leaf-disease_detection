@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("./leaf.png");
+    background-size: cover; /* Makes sure the background image covers the whole screen */
+    background-position: center center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Light semi-transparent background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.result {
+    margin-top: 30px;
+}
+
+.result h2 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+.result p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.result img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.back-button {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 16px;
+}
+
+.back-button a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Disease Prediction</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Disease Detection</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="image">Choose an image:</label>
+                <input type="file" name="image" id="image" required>
+            </div>
+            <button type="submit">Upload</button>
+        </form>
+
+        {% if image %}
+        <div class="result">
+            <h2>Predicted Disease: {{ disease_name }}</h2>
+            <p><strong>Definition:</strong> {{ definition }}</p>
+            <p><strong>Symptoms:</strong> {{ symptoms }}</p>
+            <p><strong>Remedy:</strong> {{remedy}}</p>
+            {% if link %}
+            <p><strong>More Information:</strong> <a href="{{ link }}" target="_blank">Click here</a></p>
+           {% endif %}
+
+
+            <h3>Uploaded Image:</h3>
+            <img src="{{ image }}" alt="Uploaded Image">
+        </div>
+
+        <div class="back-button">
+            <a href="{% url 'upload_image' %}">Upload Another Image</a>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
